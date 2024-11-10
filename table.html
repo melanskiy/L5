@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title> Лабораторная работа №5 </title>
+    <link rel="stylesheet" href="table.css" />
+</head>
+
+<body>
+    <div class="header">
+        1. <a class="classP" href="ЛР5.html">Основная страница</a>
+        2. <a class="classP" href="page2.html">Позиционированние элементов</a>
+        3. <a class="classP" href="table.html">Таблица</a>
+    </div>
+    <table id = "table1" style="width: 500px;">
+        <caption>Список студентов</caption>
+        <tr>
+            <th>id</th>
+            <th>Фамилия студента</th>
+            <th>Возраст</th>
+            <th>Направление</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Иванов</td>
+            <td>18</td>
+            <td>ИВТ</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Петров</td>
+            <td>19</td>
+            <td>ФИИТ</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Смирнов</td>
+            <td>18</td>
+            <td>ИБАС</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Васильев</td>
+            <td>20</td>
+            <td>ИВТ</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Борисов</td>
+            <td>19</td>
+            <td>ФИИТ</td>
+        </tr>
+    </table><br>
+    <form id="form1">
+        <label for="id">id</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="fname">Фамилия студента</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="age">Возраст</label><br>
+        <input type="text" id="age" name="age"><br>
+        <label for="study">Направление</label><br>
+        <input type="text" id="study" name="study"><br><br>
+        <input class="classButton" type="submit" value="Добавить">
+    </form>
+    <script>
+        document.getElementById("form1").addEventListener('submit', (event) => {
+            const table = document.getElementById("table1");
+            const idValue = document.getElementById('id').value;
+            const fnameValue = document.getElementById('fname').value;
+            const ageValue = document.getElementById('age').value;
+            const studyValue = document.getElementById('study').value;
+            const newRow = table.insertRow();
+            const idCell = newRow.insertCell();
+            const fnameCell = newRow.insertCell();
+            const ageCell = newRow.insertCell();
+            const studyCell = newRow.insertCell();
+            idCell.textContent = idValue;
+            fnameCell.textContent = fnameValue;
+            ageCell.textContent = ageValue;
+            studyCell.textContent = studyValue;
+            document.getElementById('id').value = '';
+            document.getElementById('fname').value = '';
+            document.getElementById('age').value = '';
+            document.getElementById('study').value = '';
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

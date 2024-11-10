@@ -1,0 +1,60 @@
+body {
+    background-color: darkmagenta;
+}
+
+.classP {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: greenyellow;
+}
+
+.header {
+    text-align: right;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color: blueviolet;
+    font-size: 20;
+    color: greenyellow;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: chocolate;
+    text-align: left;
+    padding: 5px;
+}
+
+td {
+    background-color: coral;
+    padding: 5px;
+}
+
+caption {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: greenyellow;
+}
+
+table {
+    margin: auto;
+}
+
+form {
+    color: greenyellow;
+    text-align: center;
+}
+.classButton {
+    color: greenyellow;
+    background-color: rgb(178, 21, 178);
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 20;
+}
